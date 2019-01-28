@@ -8,6 +8,8 @@ let ww;
 let wh;
 let r;
 let type;
+let currentDate = new Date();
+let clockButton;
 
 
 
@@ -15,17 +17,25 @@ function preload(){
   font = loadFont('Chunkfive.otf');
   type = document.querySelector("#innhold");
 }
+function setClock(){
+  theText = currentDate.getDate() + "/" + currentDate.getMonth()+1 + "  " + currentDate.getHours() + " : " + currentDate.getMinutes();
+}
+function setText(){
+  theText = type.value;
+}
 function setup() {
   particles = [];
+  if(theText != currentDate.getDate() + "/" + currentDate.getMonth()+1 + "  " + currentDate.getHours() + " : " + currentDate.getMinutes()){
   theText = type.value;
+  }
 
   ww = window.innerWidth;
   wh = window.innerHeight;
   r = ww/120;
 
-
   type.addEventListener("keyup", setup);
   type.addEventListener("keyup",clear);
+  type.addEventListener("keyup",setText);
   window.addEventListener("resize",setup);
 
   createCanvas(ww,wh);
@@ -38,6 +48,11 @@ function setup() {
 
   let fontSize = ww/8;
   let m = 0;
+
+  if(theText == currentDate.getDate() + "/" + currentDate.getMonth()+1 + "  " + currentDate.getHours() + " : " + currentDate.getMinutes()){
+    fontSize = fontSize *ww/(ww*0.9);
+  }
+  else{
   if(type.value.length >= 17){
     fontSize = fontSize/1.7;
     m = 50;
@@ -52,6 +67,8 @@ function setup() {
   if(type.value.length < 5){
     fontSize = fontSize * 1.9;
   }
+  }
+
 
 
   points = font.textToPoints(theText,10,wh/2+60,fontSize);
@@ -89,5 +106,17 @@ function draw() {
       r=ww/120;
     }
     p.repelled(r);
+  }
+
+  if(theText == currentDate.getDate() + "/" + currentDate.getMonth()+1 +
+      "  " + currentDate.getHours() + " : " + currentDate.getMinutes()){
+        let dato2 = new Date();
+        if(dato2.getDate() + "/" + dato2.getMonth()+1 + "  " + dato2.getHours() + " : " + dato2.getMinutes() != theText){
+            currentDate = dato2;
+            setClock();
+            clear();
+            setup();
+      }
+
   }
 }
