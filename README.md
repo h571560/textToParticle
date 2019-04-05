@@ -1,9 +1,9 @@
 # textToParticle
 <br />
-<br />
-<br />
 small project to learn about steering algorithm, p5 as a library and javascript.
 written in javascript using the p5.js library and html for the index.html page that uses the js files.
+<br />
+<br />
 
 ### what does it do?
 
