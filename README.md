@@ -1,8 +1,8 @@
-"#textToParticle" 
+##textToParticle 
 
 #what does it do?
 
-'textToParticle' is a program that transfers text to an array of particles that can be affected by physics, the mouse pointer is repelling the partciles, but the 
+*textToParticle* is a program that transfers text to an array of particles that can be affected by physics, the mouse pointer is repelling the partciles, but the 
 particles also has a steering algorithm that affects them aswell, so they will always steer back to the original position if 
 they are not affected by any other force.
 
