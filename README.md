@@ -11,7 +11,7 @@ written in javascript using the p5.js library and html for the index.html page t
 particles also has a steering algorithm that affects them aswell, so they will always steer back to the original position if 
 they are not affected by any other force.
 
-the user can type in any word in the text box at the top which will then form the word as pardicles displayed in the browser.
+the user can type in any word in the text box at the top which will then form the word as particles displayed in the browser.
 there is also a option for the particles to display the current time. The particles will rearrange each minute to update the time.
 
 the size of the displayed particle text will change depending on the window size, font size, word length and CAPS/no caps.
