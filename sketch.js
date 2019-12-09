@@ -142,6 +142,9 @@ function draw() {  // p5 draw function is a loop that draws on the p5 canvas.
         }
         if(dato2.getMinutes() < 10 && !minuteStr2.startsWith("0")){
           minuteStr2 = "0" + minuteStr2;
+          if(dato2.getMinutes() == 0){
+            minuteStr2 = "00";
+          }
         }
         if(dayStr2 + "/" + monthStr2 + "  " + hoursStr2 + " : " + minuteStr2 != theText){
             currentDate = dato2;

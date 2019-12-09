@@ -7,8 +7,14 @@
   <script language="javascript" src="libraries/p5.sound.js"></script>
   <script language="javascript" type="text/javascript" src="Particle.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link rel="stylesheet" href="site.css" type="text/css">
 </head>
 <body>
-  <input id="innhold" type="text" value="your text here" /> <input id="klokke" type="submit" value ="klokke"  onclick="setClock(),setup()"/>
+  <input id="innhold" type="text" placeholder="your text here" />
+  <input id="klokke" type="submit" value ="klokke"  onclick="setClock(),setup()"/>
+
+  <p id="beskrivelse"> Skriv inn den teksten du vil få opp på skjermen og partiklene vil illusterer det. <br/>
+    Trykk på klokke knappen for å vise klokken istede. Du kan også påvirke partiklene ved å bruke musen til å påføre en kraft.</br>
+    Trykk på venster museklikker for å endre styrken på kraften som påføres, veksler mellom 3 strykegrader.<p>
 </body>
 </html>
