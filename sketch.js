@@ -124,7 +124,7 @@ function draw() {  // p5 draw function is a loop that draws on the p5 canvas.
     p.repelled(r);
   }
 
-  if(theText == dayStr + "/" + monthStr + "  " + hoursStr + " : " + minuteStr){ // like if a minute passes, the canvas will update and the correct
+  if(theText == dayStr + "/" + monthStr + "  " + hoursStr + " : " + minuteStr){ // if a minute passes, the canvas will update and the correct
         let dato2 = new Date();                                                 //date will be shown
         let monthStr2 = (dato2.getMonth()+1).toString();
         let dayStr2 = dato2.getDate().toString();
